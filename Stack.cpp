@@ -13,39 +13,39 @@ void Stack::PrintInfo()
 void Stack::PrintStack()
 {
     std::cout << "--- stack ---" << std::endl;
-    if (topIndex < 0)
+    if (mTopIndex < 0)
     {
         std::cout << "-------------" << std::endl;
         std::cout << "EMPTY" << std::endl;
         return;
     }
 
-    for (int i = topIndex; i >= 0; --i)
+    for (int i = mTopIndex; i >= 0; --i)
     {
-        std::cout << container[i] << std::endl;
+        std::cout << mContainer[i] << std::endl;
     }
     std::cout << "-------------" << std::endl;
 }
 
 void Stack::Push(int value)
 {
-    if (topIndex >= STACK_SIZE - 1)
+    if (mTopIndex >= STACK_SIZE - 1)
     {
         std::cout << "Stack is FULL!!!" << std::endl;
         return;
     }
 
-    container[++topIndex] = value;
+    mContainer[++mTopIndex] = value;
 }
 
 void Stack::Pop()
 {
-    if (topIndex < 0)
+    if (mTopIndex < 0)
     {
         return;
     }
 
-    std::cout << container[topIndex--] << " pop!" << std::endl;
+    std::cout << mContainer[mTopIndex--] << " pop!" << std::endl;
 }
 
 void Stack::ProcessUserInput()

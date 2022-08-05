@@ -10,8 +10,8 @@ enum Command
 
 class Stack
 {
-    int container[STACK_SIZE]{};
-    int topIndex = -1;
+    int mContainer[STACK_SIZE]{};
+    int mTopIndex = -1;
 
 public:
     void PrintInfo();
